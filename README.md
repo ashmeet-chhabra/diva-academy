@@ -77,9 +77,3 @@ Place your audio files in `assets/audio/`:
 | `gameover.wav` | Game over |
 
 The game falls back to procedural Web Audio if files are missing.
-
-## Music Credits
-
-The external audio tracks utilize royalty-free music by Kevin MacLeod:
-- "Ultralounge" (Title screen), "Prelude and Action" (Face-offs) - Kevin MacLeod (incompetech.com)
-- Licensed under Creative Commons: By Attribution 4.0 (CC BY 4.0)
