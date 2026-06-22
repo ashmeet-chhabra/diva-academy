@@ -42,6 +42,7 @@ import AIClient from './ai-client.js';
 // ─── Dialogue State ──────────────────────────────────────────
 let activeDialogue = null;
 let gameLoopRunning = false;
+let interactionLocked = false;
 
 export function startDialogue(speaker, lines, actions = []) {
   activeDialogue = { speaker, lines, actions, index: 0, selectedAction: 0 };
@@ -115,6 +116,7 @@ function closeDialogue() {
   activeDialogue = null;
   const box = document.getElementById('dialogue-box');
   if (box) box.classList.add('hidden');
+  interactionLocked = false;
 }
 
 document.getElementById('btn-dialogue-next')?.addEventListener('click', advanceDialogue);
@@ -158,13 +160,14 @@ async function getNpcDialogue(npc) {
       'Two layers of truth. The imitation game has never been more fun. Ready to play?'
     ];
   }
+  const banter = getRandomBanter(npc.tier);
+  if (banter) return banter;
+
   const aiLines = await AIClient.generateBanter(
     npc.name, npc.tier, Settings.playerName,
     Player.rep, npc.name in WorldState.defeated, currentRoom?.name
   );
   if (aiLines && aiLines.length > 0) return aiLines;
-  const banter = getRandomBanter(npc.tier);
-  if (banter) return banter;
   const byTier = {
     STARLET: ['I keep the basics sharp. Lyrics, eras, red carpets — the essentials.', 'Beat me and you prove you can hang in the hallway.'],
     DIVA: ['This room has standards, darling. I ask fewer questions than Mother, but I expect taste.', 'Show me your pop memory is more than vibes.'],
@@ -447,8 +450,13 @@ function tryInteract() {
     advanceDialogue();
     return;
   }
+  if (interactionLocked) return;
+  interactionLocked = true;
   const entity = getNearbyEntity();
-  if (!entity) return;
+  if (!entity) {
+    interactionLocked = false;
+    return;
+  }
   if (entity.tier) {
     startNpcInteraction(entity);
   } else if (entity.type === 'hangman') {
@@ -464,6 +472,7 @@ canvas.addEventListener('click', () => {
 
 document.getElementById('btn-result-continue')?.addEventListener('click', () => {
   activeDialogue = null;
+  interactionLocked = false;
   showScreen('game');
   resizeCanvas();
   AudioManager.startExploration();
