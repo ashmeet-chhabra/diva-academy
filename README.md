@@ -2,6 +2,8 @@
 
 A pop culture trivia adventure. Walk through the Academy, challenge NPCs to trivia battles, and prove you know your stuff.
 
+<img width="1337" height="862" alt="Screenshot 2026-06-22 101756" src="https://github.com/user-attachments/assets/d7df83cf-08f7-465e-8cc2-49046d58674e" />
+
 ## Quick Start
 
 The game uses ES modules (`<script type="module">`), so it requires a static HTTP server — `file://` won't work in modern browsers.
