@@ -1,0 +1,304 @@
+[
+  {
+    "text": "I wake up like this",
+    "isReal": true,
+    "realArtist": "Beyoncé",
+    "fakeArtist": "Rihanna",
+    "source": "Flawless (2013)"
+  },
+  {
+    "text": "I'm not a rapper",
+    "isReal": true,
+    "realArtist": "Nicki Minaj",
+    "fakeArtist": "Cardi B",
+    "source": "Super Bass intro"
+  },
+  {
+    "text": "Baby, I'm a star",
+    "isReal": true,
+    "realArtist": "Prince",
+    "fakeArtist": "Michael Jackson",
+    "source": "Purple Rain (1984)"
+  },
+  {
+    "text": "Don't call me a queen",
+    "isReal": true,
+    "realArtist": "Cher",
+    "fakeArtist": "Madonna",
+    "source": "Cher interview (1998)"
+  },
+  {
+    "text": "I'm the worst thing that ever happened to you",
+    "isReal": true,
+    "realArtist": "Madonna",
+    "fakeArtist": "Lady Gaga",
+    "source": "Rebel Heart era (2015)"
+  },
+  {
+    "text": "I don't do fashion. I am fashion",
+    "isReal": true,
+    "realArtist": "Coco Chanel",
+    "fakeArtist": "Diana Vreeland",
+    "source": "Attributed quote"
+  },
+  {
+    "text": "I'm not bossy. I'm the boss",
+    "isReal": true,
+    "realArtist": "Beyoncé",
+    "fakeArtist": "Sheryl Sandberg",
+    "source": "Lean In campaign (2014)"
+  },
+  {
+    "text": "I'm a pop star, not a saint",
+    "isReal": true,
+    "realArtist": "Dua Lipa",
+    "fakeArtist": "Ariana Grande",
+    "source": "Interview (2020)"
+  },
+  {
+    "text": "I'd rather be hated for who I am than loved for who I'm not",
+    "isReal": true,
+    "realArtist": "Lady Gaga",
+    "fakeArtist": "Kurt Cobain",
+    "source": "Born This Way era (2011)"
+  },
+  {
+    "text": "The truth is you can be whatever you want",
+    "isReal": true,
+    "realArtist": "Lady Gaga",
+    "fakeArtist": "Taylor Swift",
+    "source": "American Horror Story: Hotel (2015)"
+  },
+  {
+    "text": "I'm very careful with my public image",
+    "isReal": true,
+    "realArtist": "Adele",
+    "fakeArtist": "Taylor Swift",
+    "source": "Vogue interview (2016)"
+  },
+  {
+    "text": "I'm just a girl who decided to go for it",
+    "isReal": true,
+    "realArtist": "Rihanna",
+    "fakeArtist": "Beyoncé",
+    "source": "Fenty Beauty launch (2017)"
+  },
+  {
+    "text": "I don't want to be a pop star. I want to be a legend",
+    "isReal": true,
+    "realArtist": "Beyoncé",
+    "fakeArtist": "Adele",
+    "source": "I Am... Sasha Fierce era (2008)"
+  },
+  {
+    "text": "I'm not in competition with anyone but myself",
+    "isReal": true,
+    "realArtist": "Ariana Grande",
+    "fakeArtist": "Taylor Swift",
+    "source": "Thank U, Next era (2018)"
+  },
+  {
+    "text": "I always say what I feel and I never apologize for it",
+    "isReal": true,
+    "realArtist": "Cardi B",
+    "fakeArtist": "Nicki Minaj",
+    "source": "Bodak Yellow era (2017)"
+  },
+  {
+    "text": "You have to believe in yourself when no one else does",
+    "isReal": true,
+    "realArtist": "Serena Williams",
+    "fakeArtist": "Beyoncé",
+    "source": "Interview (2015)"
+  },
+  {
+    "text": "I didn't come here to play",
+    "isReal": true,
+    "realArtist": "Nicki Minaj",
+    "fakeArtist": "Cardi B",
+    "source": "Roman Reloaded era (2012)"
+  },
+  {
+    "text": "I'm a survivor. I'm not gonna give up",
+    "isReal": true,
+    "realArtist": "Beyoncé",
+    "fakeArtist": "Destiny's Child (collective)",
+    "source": "Survivor (2001)"
+  },
+  {
+    "text": "The most courageous act is still to think for yourself",
+    "isReal": true,
+    "realArtist": "Coco Chanel",
+    "fakeArtist": "Audrey Hepburn",
+    "source": "Attributed quote"
+  },
+  {
+    "text": "I am my own muse",
+    "isReal": true,
+    "realArtist": "Frida Kahlo",
+    "fakeArtist": "Coco Chanel",
+    "source": "Self-portrait writing (1946)"
+  },
+  {
+    "text": "I'm tough, I'm ambitious, and I know exactly what I want",
+    "isReal": true,
+    "realArtist": "Madonna",
+    "fakeArtist": "Cher",
+    "source": "Interview (1985)"
+  },
+  {
+    "text": "I've been watching you and I think you're going to be huge",
+    "isReal": true,
+    "realArtist": "Pattie LaBelle",
+    "fakeArtist": "Aretha Franklin",
+    "source": "To Lady Gaga, early career"
+  },
+  {
+    "text": "If you can't love yourself, how in the hell you gonna love somebody else",
+    "isReal": true,
+    "realArtist": "RuPaul",
+    "fakeArtist": "Dolly Parton",
+    "source": "Drag Race catchphrase"
+  },
+  {
+    "text": "We're all born naked and the rest is drag",
+    "isReal": true,
+    "realArtist": "RuPaul",
+    "fakeArtist": "RuPaul",
+    "source": "Repeated on Drag Race"
+  },
+  {
+    "text": "You better don't",
+    "isReal": true,
+    "realArtist": "RuPaul",
+    "fakeArtist": "RuPaul",
+    "source": "Drag Race catchphrase"
+  },
+  {
+    "text": "Music is the weapon of the future",
+    "isReal": true,
+    "realArtist": "Fela Kuti",
+    "fakeArtist": "Stevie Wonder",
+    "source": "Attributed quote"
+  },
+  {
+    "text": "I don't make music for people who don't get it",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "The stage is sacred ground. Never let anyone take your spotlight",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "Every diva needs her silence before the storm",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "I learned everything I know from my rivals",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "If you're not living on the edge, you're taking up too much space",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "The moment you doubt yourself, the audience feels it",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "A true icon never needs a microphone to be heard",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "Fashion is my armor against the world",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "I don't follow trends. I set them and walk away",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "The spotlight finds you when you stop chasing it",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "Queer culture didn't become popular. Popular culture became queer",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "Every room you walk into should feel your presence before you speak",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "Silence is the best stage performance",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "You can't spell fabulous without a little audacity",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "The dance floor is a democracy. Everyone gets their moment",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "Don't dress for the job you have. Dress for the empire you're building",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "A real diva never apologizes for taking up space",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "The best revenge is a body full of glitter and a face full of joy",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "Legends aren't born. They're made in the rehearsal room",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "If the music doesn't move your feet, find better music",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "A good wig can change your whole perspective",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "Pride isn't a month. It's a lifestyle",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "The best performers never apologize for their success",
+    "isReal": false,
+    "source": "Completely fabricated"
+  },
+  {
+    "text": "Confidence is the only outfit that never goes out of style",
+    "isReal": false,
+    "source": "Completely fabricated"
+  }
+]

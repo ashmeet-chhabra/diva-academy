@@ -1,0 +1,14 @@
+{
+  "name": "diva-academy",
+  "version": "1.0.0",
+  "description": "NPCs challenge you to pop culture trivia. Reach your goal or get eliminated.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "dotenv": "^16.4.0"
+  }
+}

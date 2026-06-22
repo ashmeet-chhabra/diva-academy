@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='100%' y2='100%'><stop offset='0%' stop-color='%23f472b6'/><stop offset='50%' stop-color='%23c084fc'/><stop offset='100%' stop-color='%23fbbf24'/></linearGradient></defs><rect width='100' height='100' rx='25' fill='%230a0514'/><text x='50' y='72' font-family='sans-serif' font-weight='900' font-size='56' letter-spacing='-2' fill='url(%23g)' text-anchor='middle'>DA</text></svg>">
+  <title>Diva Academy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+  
+    <!-- Ambient Cinematic Background (Visible behind all menu screens) -->
+    <div id="ambient-bg">
+      <div class="title-spotlight"></div>
+      <div class="title-grid"></div>
+    </div>
+
+    <!-- Title Screen -->
+    <div id="screen-title" class="screen active">
+      <div class="title-content">
+        <!-- Pixel Art Sprite Cast Flanking -->
+        <div class="title-sprites">
+          <div class="title-sprite-wrap starlet-bob">
+            <img src="assets/sprites/npc-starlet.png" alt="Starlet" />
+            <span class="sprite-label">Starlet</span>
+          </div>
+          <div class="title-sprite-wrap diva-bob">
+            <img src="assets/sprites/npc-diva.png" alt="Diva" />
+            <span class="sprite-label">Diva</span>
+          </div>
+          <div class="title-sprite-wrap dj-bob">
+            <img src="assets/sprites/npc-dj.png" alt="DJ" />
+            <span class="sprite-label">DJ</span>
+          </div>
+          <div class="title-sprite-wrap mother-bob">
+            <img src="assets/sprites/npc-mother.png" alt="Mother" />
+            <span class="sprite-label">Mother</span>
+          </div>
+        </div>
+
+        <div class="title-text-group">
+          <div class="title-kicker">▶ Orientation Week 2026 ◀</div>
+          <h1 class="game-title">DIVA<br/><span>ACADEMY</span></h1>
+          <p class="tagline">
+            <span class="tagline-walk">Walk the Academy.</span>
+            <span class="tagline-faceoff">Face off.</span>
+            <span class="tagline-survive">Survive.</span>
+          </p>
+          <p class="subtitle">Your pop culture knowledge is currency here.</p>
+        </div>
+        
+        <div class="title-action-group">
+          <button id="btn-start" class="btn-primary">Enter the Academy</button>
+          <button id="btn-settings" class="btn-secondary">Settings</button>
+          <button id="btn-how-to-play" class="btn-secondary">How to Play</button>
+        </div>
+
+        <div id="pool-low-warning" class="pool-low-warning">
+          <p>Question pool running low. Visit Settings to add more.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Settings Screen -->
+    <div id="screen-settings" class="screen">
+      <div class="panel" style="position: relative;">
+        <button id="btn-settings-back-top" class="btn-back-nav" aria-label="Back">&larr;</button>
+        <h2>▶ Settings ◀</h2>
+        <label>Win REP Goal
+          <input type="number" id="setting-goal-rep" value="200" min="150" max="500" step="10" />
+        </label>
+        <label>Player Name
+          <input type="text" id="setting-name" value="Starlet" maxlength="12" />
+        </label>
+        <label class="checkbox-label" style="display: flex; flex-direction: row; align-items: center; gap: 10px; cursor: pointer;">
+          <input type="checkbox" id="setting-crt" style="width: auto; cursor: pointer;" /> Retro CRT Scanlines
+        </label>
+        <div class="settings-divider"></div>
+        <h3>Question Pool</h3>
+        <p id="pool-status-text" class="pool-status">Loading...</p>
+        <button id="btn-expand-pool" class="btn-secondary">Expand Question Pool</button>
+        <p id="expand-status" class="form-status"></p>
+        <div class="settings-divider"></div>
+        <h3>Quote Pool (Turing Challenge)</h3>
+        <p id="quote-pool-status" class="pool-status">Loading...</p>
+        <button id="btn-expand-quotes" class="btn-secondary">Expand Quote Pool</button>
+        <p id="expand-quote-status" class="form-status"></p>
+        <div class="settings-divider"></div>
+        <h3>Add a Question</h3>
+        <form id="manual-question-form" class="question-form">
+          <label>Question
+            <input type="text" id="mq-question" placeholder="What pop culture question do you want to add?" maxlength="200" required />
+          </label>
+          <label>Correct Answer
+            <input type="text" id="mq-correct" placeholder="The right answer" maxlength="100" required />
+          </label>
+          <label>Wrong Answer 1
+            <input type="text" id="mq-wrong1" placeholder="A wrong answer" maxlength="100" required />
+          </label>
+          <label>Wrong Answer 2
+            <input type="text" id="mq-wrong2" placeholder="Another wrong answer" maxlength="100" required />
+          </label>
+          <label>Wrong Answer 3
+            <input type="text" id="mq-wrong3" placeholder="One more wrong answer" maxlength="100" required />
+          </label>
+          <label>Category
+            <select id="mq-category">
+              <option value="music">Music</option>
+              <option value="film">Film & TV</option>
+              <option value="fashion">Fashion</option>
+              <option value="trivia">Queer Culture</option>
+            </select>
+          </label>
+          <button type="submit" class="btn-primary">Add Question</button>
+          <p id="mq-status" class="form-status"></p>
+        </form>
+        <button id="btn-settings-back" class="btn-secondary">Back</button>
+      </div>
+    </div>
+
+    <!-- How to Play Screen -->
+    <div id="screen-howtoplay" class="screen">
+      <div class="panel">
+        <h2>▶ How to Play ◀</h2>
+        <div class="how-to-play-content">
+          <div class="htp-section">
+            <h3>Movement</h3>
+            <p>Use WASD or Arrow Keys to move around the Academy. On mobile, use the on-screen D-pad.</p>
+          </div>
+          <div class="htp-section">
+            <h3>Interaction</h3>
+            <p>Walk up to an NPC or terminal and press E or Space to interact. On mobile, tap the canvas.</p>
+          </div>
+          <div class="htp-section">
+            <h3>Face-Offs</h3>
+            <p>NPCs challenge you to pop culture trivia. Answer correctly to gain REP. Answer wrong and you lose REP. A timer counts down — answer fast for bonus points.</p>
+          </div>
+          <div class="htp-section">
+            <h3>Streaks</h3>
+            <p>3 correct in a row: ON FIRE bonus. 5 in a row: UNSTOPPABLE bonus. Wrong answers reset your streak.</p>
+          </div>
+          <div class="htp-section">
+            <h3>Winning and Losing</h3>
+            <p>Reach your REP goal (default 200) to win. Hit 0 REP and it is game over. Your REP carries across the whole run.</p>
+          </div>
+          <div class="htp-section">
+            <h3>Perks</h3>
+            <p>After each run, you earn permanent REP to spend on perks in the Perk Shop. Perks give you advantages in future runs.</p>
+          </div>
+        </div>
+        <button id="btn-howtoplay-back" class="btn-secondary">Back</button>
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="screen-game" class="screen">
+      <div id="hud">
+        <div id="hud-left" style="display: flex; flex-direction: column; gap: 2px; min-width: 160px;">
+          <div id="hud-name" style="font-weight: 800; font-size: 0.95rem; color: var(--accent2); text-transform: uppercase; letter-spacing: 0.05em;"></div>
+          <div id="hud-room" style="font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; opacity: 0.85;"></div>
+        </div>
+        <div id="hud-center" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 12px; max-width: 360px; margin: 0 auto;">
+          <span style="font-size: 0.75rem; font-weight: bold; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em;">REP</span>
+          <div id="hud-rep-bar-bg" style="flex: 1; height: 10px; border-radius: 4px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.08); overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.6);">
+            <div id="hud-rep-bar" style="height: 100%; background: repeating-linear-gradient(90deg, var(--accent1), var(--accent2) 16px, #070412 16px, #070412 18px); border-radius: 2px; transition: width 0.5s; box-shadow: 0 0 10px var(--accent1);"></div>
+          </div>
+          <span id="hud-rep-label" style="font-size: 0.75rem; color: var(--text); font-weight: bold; white-space: nowrap;"></span>
+        </div>
+        <div id="hud-right" style="display: flex; flex-direction: row; align-items: center; gap: 8px; min-width: 160px; justify-content: flex-end;">
+          <div id="hud-spotlight">Spotlight</div>
+          <button id="btn-hud-perks" class="hud-btn" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; color: var(--text); padding: 4px 12px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.15s;">Perks</button>
+          <button id="btn-mute" style="width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: var(--text); font-size: 1rem; transition: all 0.15s;" title="Toggle Sound">♫</button>
+          <button id="btn-pause" style="width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer;">II</button>
+        </div>
+      </div>
+      <canvas id="gameCanvas"></canvas>
+      <div id="objective-panel">
+        <button id="btn-toggle-objective" class="objective-toggle-btn" aria-label="Toggle Quests">◀</button>
+        <div id="objective-content">
+          <div id="objective-rank">Fresh Face</div>
+          <div id="objective-title">Orientation Week</div>
+          <div id="objective-text">Meet your guide in the Grand Lobby.</div>
+          <div id="trophy-row"></div>
+        </div>
+      </div>
+      <div id="dpad">
+        <button data-dir="up">▲</button>
+        <div class="dpad-mid">
+          <button data-dir="left">&lt;</button>
+          <button data-dir="right">&gt;</button>
+        </div>
+        <button data-dir="down">▼</button>
+      </div>
+    </div>
+
+    <!-- Pause Overlay -->
+    <div id="screen-pause" class="screen">
+      <div class="panel center">
+        <h2>▶ Paused ◀</h2>
+        <p id="pause-stats"></p>
+        <label class="checkbox-label" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px; cursor: pointer; margin-bottom: 12px; font-size: 0.9rem; color: var(--text);">
+          <input type="checkbox" id="pause-setting-crt" style="width: auto; cursor: pointer;" /> Retro CRT Scanlines
+        </label>
+        <button id="btn-resume" class="btn-primary">Resume</button>
+        <button id="btn-customize" class="btn-secondary">Your Look</button>
+        <button id="btn-active-perks" class="btn-secondary">Active Perks</button>
+        <button id="btn-quit-title" class="btn-secondary">Quit to Title</button>
+        <button id="btn-reset-game" class="btn-secondary" style="color: var(--danger);">Reset Game</button>
+      </div>
+    </div>
+
+    <!-- Customize Screen -->
+    <div id="screen-customize" class="screen">
+      <div class="panel">
+        <h2>▶ Your Look ◀</h2>
+        <div id="custom-sections"></div>
+        <button id="btn-custom-back" class="btn-secondary">Back</button>
+      </div>
+    </div>
+
+    <!-- Face-Off Screen -->
+    <div id="screen-faceoff" class="screen">
+      <canvas id="faceoffCanvas"></canvas>
+      <div id="faceoff-stage">
+        <div id="faceoff-npc-art"></div>
+        <div id="faceoff-info">
+          <div id="faceoff-npc-name"></div>
+          <div id="faceoff-tier-trophy"></div>
+        </div>
+      </div>
+      <div id="faceoff-timer-wrap">
+        <div id="faceoff-timer-bar"><div id="faceoff-timer-fill"></div></div>
+        <span id="faceoff-timer-label">12</span>
+      </div>
+      <div id="faceoff-streak-wrap">
+        <span id="faceoff-streak-label"></span>
+      </div>
+      <div id="faceoff-quiz-box">
+        <div id="faceoff-progress"></div>
+        <p id="faceoff-question"></p>
+        <div id="faceoff-choices"></div>
+        <div id="faceoff-feedback"></div>
+      </div>
+      <div id="faceoff-rep-preview"></div>
+    </div>
+
+    <!-- Quote Challenge Screen -->
+    <div id="screen-quote" class="screen">
+      <canvas id="quoteCanvas"></canvas>
+      <div id="quote-stage">
+        <div id="quote-npc-art">Alan</div>
+        <div id="quote-info">
+          <div id="quote-npc-name">Archivist Alan</div>
+          <div id="quote-label">TURING CHALLENGE</div>
+        </div>
+      </div>
+      <div id="quote-timer-wrap">
+        <div id="quote-timer-bar"><div id="quote-timer-fill"></div></div>
+        <span id="quote-timer-label">15</span>
+      </div>
+      <div id="quote-layer-indicator">Layer 1 — Real or Fake?</div>
+      <div id="quote-box">
+        <div id="quote-progress">Quote 1 / 2</div>
+        <div id="quote-scroll">
+          <p id="quote-text"></p>
+          <p id="quote-source"></p>
+        </div>
+        <div id="quote-l2-prompt" class="hidden">
+          Was <span id="quote-l2-artist"></span> the one who said this?
+        </div>
+        <div id="quote-buttons">
+          <button id="btn-quote-real" class="quote-btn real-btn">Real Quote</button>
+          <button id="btn-quote-fake" class="quote-btn fake-btn">Fake Quote</button>
+        </div>
+        <div id="quote-l2-buttons" class="hidden">
+          <button id="btn-quote-yes" class="quote-btn yes-btn">Yes</button>
+          <button id="btn-quote-no" class="quote-btn no-btn">No</button>
+        </div>
+        <div id="quote-feedback"></div>
+      </div>
+      <div id="quote-rep-display">+0 REP</div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="screen-result" class="screen">
+      <div class="result-card">
+        <div id="result-icon"></div>
+        <h2 id="result-title"></h2>
+        <p id="result-body"></p>
+        <div id="result-rep-change"></div>
+        <button id="btn-result-continue" class="btn-primary">Continue</button>
+      </div>
+    </div>
+
+    <!-- Hangman Screen -->
+    <div id="screen-hangman" class="screen">
+      <div id="hm-container">
+        <div id="hm-header">
+          <h2>Hangman Hall</h2>
+          <p>Guess the pop star's name</p>
+          <div id="hm-wrong-count"></div>
+          <p id="hm-hint" class="muted-text"></p>
+        </div>
+        <div id="hm-game-area">
+          <canvas id="hm-canvas" width="180" height="200"></canvas>
+          <div id="hm-right">
+            <div id="hm-word"></div>
+            <div id="hm-feedback"></div>
+            <div id="hm-result"></div>
+            <button id="btn-hm-return" class="btn-primary" style="display:none;margin-top:8px;">Return</button>
+          </div>
+        </div>
+        <div id="hm-keyboard"></div>
+        <div id="hm-word-guess">
+          <input type="text" id="hm-word-input" placeholder="Guess the full name" maxlength="30" autocomplete="off" />
+          <button id="btn-hm-guess-word" class="btn-secondary">Guess Word</button>
+        </div>
+        <button id="btn-hm-skip" class="btn-secondary">Leave Hall</button>
+      </div>
+    </div>
+
+    <!-- Pop Connect Screen -->
+    <div id="screen-collab" class="screen">
+      <div id="pc-container">
+        <div id="pc-header">
+          <h2>Pop Connect</h2>
+          <p>Link the two artists through real collaborations</p>
+          <p id="pc-hint" class="muted-text"></p>
+        </div>
+        <div id="pc-artists-display">
+          <div class="pc-endpoint">
+            <div class="pc-endpoint-label">Start</div>
+            <div id="pc-start-artist" class="pc-artist-name"></div>
+          </div>
+          <div class="pc-chain-wrap">
+            <div id="pc-chain"></div>
+          </div>
+          <div class="pc-endpoint">
+            <div class="pc-endpoint-label">End</div>
+            <div id="pc-end-artist" class="pc-artist-name"></div>
+          </div>
+        </div>
+        <p id="pc-feedback" class="muted-text"></p>
+        <div id="pc-choices"></div>
+        <div id="pc-result"></div>
+        <button id="btn-pc-return" class="btn-primary" style="display:none;margin-top:8px;">Return</button>
+        <button id="btn-pc-skip" class="btn-secondary">Leave Corner</button>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="screen-gameover" class="screen">
+      <div class="panel center">
+        <h2 id="gameover-title"></h2>
+        <p id="gameover-body"></p>
+        <p id="gameover-rep-earned"></p>
+        <div id="gameover-summary"></div>
+        <p id="gameover-recap" class="recap-text"></p>
+        <button id="btn-restart" class="btn-primary">Play Again</button>
+        <button id="btn-perk-shop" class="btn-secondary">Perk Shop</button>
+        <button id="btn-go-title" class="btn-secondary">Title Screen</button>
+      </div>
+    </div>
+
+    <!-- Perk Shop Screen -->
+    <div id="screen-perks" class="screen">
+      <div class="panel">
+        <h2>▶ Perk Shop ◀</h2>
+        <p class="perk-bank">Permanent REP: <span id="perm-rep-display">0</span></p>
+        <div id="perk-list"></div>
+        <button id="btn-perks-back" class="btn-secondary">Back</button>
+      </div>
+    </div>
+
+    <!-- Room Transition Overlay -->
+    <div id="room-toast">
+      <div id="room-toast-title"></div>
+      <div id="room-toast-subtitle"></div>
+    </div>
+
+    <!-- Perk Activation Toast -->
+    <div id="perk-toast"></div>
+
+    <!-- Victory Credits -->
+    <div id="victory-credits">
+      <div class="credits-content">
+        <div class="credits-line credits-title">Diva Academy</div>
+        <div class="credits-line credits-subtitle">You Did It</div>
+        <div class="credits-line">Thanks for playing</div>
+        <div class="credits-line credits-small">Built with Canvas, Web Audio, and Express</div>
+      </div>
+    </div>
+
+    <!-- Active Perks Screen -->
+    <div id="screen-active-perks" class="screen">
+      <div class="panel">
+        <h2>▶ Active Perks ◀</h2>
+        <div id="active-perks-list"></div>
+        <button id="btn-active-perks-back" class="btn-secondary">Back</button>
+      </div>
+    </div>
+
+    <!-- Dialogue Overlay -->
+    <div id="dialogue-box" class="hidden">
+      <div id="dialogue-speaker"></div>
+      <div id="dialogue-text"></div>
+      <div id="dialogue-actions">
+        <button id="btn-dialogue-next" class="btn-primary">Next</button>
+      </div>
+    </div>
+
+    <div id="transition-overlay"></div>
+
+    <!-- CRT Overlay -->
+    <div id="crt-overlay">
+      <div class="crt-scanlines"></div>
+      <div class="crt-vignette"></div>
+    </div>
+
+  </div>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>

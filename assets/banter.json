@@ -1,0 +1,62 @@
+{
+  "generic": [
+    ["Well, well. Another fresh face trying to make it in this Academy.", "Let's see if you can handle what we throw at you."],
+    ["I've been watching you wander the halls.", "You've got potential. Or at least, you've got nerve. Same thing sometimes."],
+    ["Honey, you look like you just stepped off a red carpet.", "A very budget red carpet, but still."],
+    ["You know what separates a diva from everyone else? Confidence.", "And knowing every lyric to every Beyonce album. Both are essential."],
+    ["I don't just battle anyone, you know.", "But something about you tells me this might be worth my time."],
+    ["Welcome to my domain. Rules are simple: answer correctly, or don't bother coming back.", "Just kidding. We'd still let you back. Probably."],
+    ["You've got that look in your eye. The 'I'm about to prove everyone wrong' look.", "I respect it. Let's dance."],
+    ["Some people come here to learn. Some come to win.", "Which one are you? Don't answer that. Show me instead."],
+    ["I heard someone new was making waves around here.", "Let's see if those waves are more like a ripple or a tsunami."],
+    ["Everyone starts somewhere. Let's see where you land.", "Ready when you are."]
+  ],
+  "STARLET": [
+    ["Hey! You're new here too, right?", "Well, not as new as some. Let's see what you've got."],
+    ["I may be a Starlet, but don't underestimate me.", "I've been studying the classics since before you could spell 'discography'."],
+    ["Everyone starts somewhere. For us, it's right here.", "Let's prove we belong on this stage."],
+    ["I love meeting new people. Especially ones who know their pop history.", "Ready for a friendly face-off?"],
+    ["They say the hallway is where it all starts.", "Let's find out if that's true."],
+    ["Don't let the Starlet label fool you.", "I've got tricks up my sleeve that would make a Mother nervous."],
+    ["You look like someone who takes their pop culture seriously.", "That's the only kind of person worth talking to around here."],
+    ["I've been practicing all week for this.", "Well, technically I've been practicing my eyeliner. But also this."],
+    ["The Grand Lobby has seen a lot of fresh faces.", "But not all of them make it to the big stage. Let's change that."],
+    ["A little friendly competition never hurt anybody.", "Okay, maybe it hurt a little. But that's part of the fun."]
+  ],
+  "DIVA": [
+    ["I don't do small talk. I do big talk.", "With impeccable references and zero tolerance for wrong answers."],
+    ["Darling, you've entered Diva territory now.", "The questions get harder, but the rewards are worth the risk."],
+    ["I've defeated more challengers than I can count.", "But who's counting? I am. The answer is a lot."],
+    ["You've got style, I'll give you that.", "But style without substance is just a costume. Prove you're more than that."],
+    ["Every Diva has a signature move. Mine is knowing everything.", "What's yours? Let's find out."],
+    ["I don't mean to be intimidating, but I am.", "It comes naturally when you have taste like mine."],
+    ["Some people think being a Diva is just about attitude.", "It's also about knowing every single collaboration, feature, and remix ever made."],
+    ["You walked in here with confidence. I like that.", "Let's see if you can walk out with the same energy."],
+    ["The stage doesn't care about your feelings.", "It only cares about whether you know the difference between an album track and a single."],
+    ["I've been polishing my knowledge all day.", "Like a diamond. Which, coincidentally, is what I am."]
+  ],
+  "DJ": [
+    ["I hear everything. Every remix, every feature, every whispered bridge.", "You can't hide a bad answer from these ears."],
+    ["Music is my life. Which means my questions are about life itself.", "Deep, right? Let's go deep."],
+    ["I've spent more time with headphones on than without.", "That kind of dedication builds a certain... encyclopedic knowledge."],
+    ["You know what makes a great DJ? Knowing what comes next.", "In music and in pop culture trivia battles."],
+    ["I don't just listen to music. I study it.", "Every sample, every interpolation, every inspired-by. It's all connected."],
+    ["The connections between artists are what fascinate me.", "One collaboration leads to another, which leads to another. It's a beautiful web."],
+    ["My playlists have more layers than a pop star's costume change.", "And every layer has a reference you need to know."],
+    ["I can tell within the first question whether you're serious.", "So show me you're serious. Or at least show me you're fun."],
+    ["The music never stops, and neither does my trivia.", "Think of it as a never-ending set. Your job is to keep up."],
+    ["Some people hear a song and forget it the next day.", "I hear a song and remember every detail forever. Let's see if you do too."]
+  ],
+  "MOTHER": [
+    ["Child, this isn't regular trivia. This is Mother's test.", "Think you can pass?"],
+    ["I've been in this game longer than most of these children have been alive.", "And I've got the knowledge to prove it. Do you?"],
+    ["When Mother speaks, you listen.", "When Mother asks, you answer. Correctly."],
+    ["They call me Mother for a reason. I nurture, I guide, and I absolutely destroy in trivia.", "Ready?"],
+    ["I don't give second chances. I give harder questions.", "Consider it a form of love."],
+    ["Every queen needs a mother. And every Academy needs someone who knows everything.", "That someone is me."],
+    ["I've seen trends come and go. I've seen artists rise and fall.", "But the ones I remember? Those are the ones that mattered. Let's see if you know them."],
+    ["You want to stand on The Stage? You need to earn it.", "And earning it means surviving Mother's questions."],
+    ["There's no shame in losing to Mother.", "There is shame in not trying. So try. Hard."],
+    ["I ask the hard questions.", "Because I know the answers. Do you?"]
+  ]
+}
